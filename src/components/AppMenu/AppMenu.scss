@@ -1,0 +1,78 @@
+.menu-list {
+  display         : flex;
+  justify-content : space-around;
+  align-items     : stretch;
+  padding         : 0 15px;
+  margin-bottom   : 20px;
+  
+  &__item {
+    box-sizing : border-box;
+    width      : 160px;
+    height     : 160px;
+    
+    @media screen and (max-width : 1200px) {
+      width : 150px;
+      height : 150px;
+    }
+    
+    @media screen and (max-width : 992px) {
+      width : 100px;
+      height : 100px;
+    }
+    
+    @media screen and (max-width : 575px) {
+      width : 65px;
+      height : 65px;
+    }
+    
+    &:not(:last-child) {
+      margin-right : 1.333%;
+    }
+    
+    a {
+      box-sizing      : border-box;
+      width           : 100%;
+      height          : 100%;
+      display         : flex;
+      justify-content : center;
+      align-items     : center;
+      padding         : 15px;
+      transition      : all .3s linear;
+      border-radius : 50%;
+      border   : 2px solid transparent;
+      
+      @media screen and (max-width : 575px) {
+        padding : 10px;
+      }
+      
+      &.active{
+        border-color : crimson;
+      }
+      
+      &:hover {
+        @media screen and (min-width : 1025px) {
+          border-bottom-color : crimson;
+          
+          path,
+          circle,
+          line,
+          polyline {
+            stroke : crimson;
+          }
+        }
+      }
+    }
+    
+    path,
+    circle,
+    line,
+    polyline {
+      transition: all .3s linear;
+    }
+    
+    svg {
+      width : 75px;
+      height : 75px;
+    }
+  }
+}
